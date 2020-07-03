@@ -4,14 +4,25 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+/*
+ * 显示类型转换
+ * 1.cast (T)x
+ * 2.Convert类
+ */
 namespace ZqCSharpLearn.Operator.A03
 {
     class OperatorA03 : ICodeTest
     {
+        public void Execute()
+        {
+            Test01();
+            Test02();
+        }
+
         /*
          * 显示类型转换 (T)x  cast
          */
-        public void Execute()
+        public void Test01()
         {
             ushort u = ushort.MaxValue;//65535
             Console.WriteLine(u);
@@ -49,6 +60,22 @@ namespace ZqCSharpLearn.Operator.A03
             1
             00000000000000000000000000000001
              */
+        }
+
+        /*
+         * Convert类
+         */
+        public void Test02()
+        {
+            uint x1 = 100;
+            ushort u1 = Convert.ToUInt16(x1);//运行正常
+
+            uint x2 = 65537;
+            ushort u2 = Convert.ToUInt16(x2);//运行报错，抛出异常 
+            //异常为：System.OverflowException:“值对于 UInt16 太大或太小。”
+
+            //但是用cast，即使用(T)x强制类型转换，并不会报错，
+            //结果是对数据进行截取
         }
     }
 }
