@@ -10,9 +10,9 @@ A03：子类调用父类的构造器；构造器和字段的实例化顺序；
 
 
 【MultiThread】
-A01：用Thread实现多线程的简单示例
-A02：线程与try/catch/finally语句
-A03：客户端控件更新，封送marshal
+A01：用Thread实现多线程的简单示例；
+A02：线程执行异常与创建线程的try/catch/finally语句；
+A03：客户端控件更新，封送marshal；
 
 【Try】
 A01：try/catch的执行方法与调用方法的异常捕获；
