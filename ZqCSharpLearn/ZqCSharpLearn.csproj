@@ -35,6 +35,7 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -43,13 +44,45 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Async\A01\AsyncA01.cs" />
+    <Compile Include="Async\A02\AsyncA02.cs" />
+    <Compile Include="Async\A03\AsyncA03.cs" />
+    <Compile Include="Async\A04\AsyncA04.cs" />
+    <Compile Include="Async\A05\AsyncA05.cs" />
+    <Compile Include="Async\A06\AsyncA06.cs" />
+    <Compile Include="Class\A01\ClassA01.cs" />
+    <Compile Include="Class\A02\ClassA02.cs" />
+    <Compile Include="Class\A03\ClassA03.cs" />
     <Compile Include="Delegate\A01\DelegateA01.cs" />
     <Compile Include="ICodeTest.cs" />
+    <Compile Include="MultiThread\A01\MultiThreadA01.cs" />
+    <Compile Include="MultiThread\A02\MultiThreadA02.cs" />
+    <Compile Include="MultiThread\A03\MultiThreadA03.cs" />
+    <Compile Include="OO\A01\OOA01.cs" />
+    <Compile Include="OO\A02\OOA02.cs" />
+    <Compile Include="Operator\A01\OperatorA01.cs" />
+    <Compile Include="Operator\A02\OperatorA02.cs" />
+    <Compile Include="Operator\A03\OperatorA03.cs" />
+    <Compile Include="Operator\A04\OperatorA04.cs" />
+    <Compile Include="Operator\A05\OperatorA05.cs" />
+    <Compile Include="Operator\A06\OperatorA06.cs" />
+    <Compile Include="Operator\A07\OperatorA07.cs" />
+    <Compile Include="Operator\A08\OperatorA08.cs" />
+    <Compile Include="Operator\A09\OperatorA09.cs" />
+    <Compile Include="Operator\A10\OperatorA10.cs" />
+    <Compile Include="Operator\A11\OperatorA11.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Statement\A01\StatementA01.cs" />
+    <Compile Include="Statement\A02\StatementA02.cs" />
+    <Compile Include="Statement\A03\StatementA03.cs" />
+    <Compile Include="Try\A01\TryA01.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="KnowledgeItem.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
