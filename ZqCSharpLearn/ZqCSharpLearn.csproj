@@ -58,8 +58,17 @@
     <Compile Include="MultiThread\A01\MultiThreadA01.cs" />
     <Compile Include="MultiThread\A02\MultiThreadA02.cs" />
     <Compile Include="MultiThread\A03\MultiThreadA03.cs" />
+    <Compile Include="MultiThread\B01\MultiThreadB01.cs" />
+    <Compile Include="MultiThread\B02\MultiThreadB02.cs" />
+    <Compile Include="MultiThread\B03\MultiThreadB03.cs" />
+    <Compile Include="MultiThread\B04\MultiThreadB04.cs" />
+    <Compile Include="MultiThread\B05\MultiThreadB05.cs" />
     <Compile Include="OO\A01\OOA01.cs" />
     <Compile Include="OO\A02\OOA02.cs" />
+    <Compile Include="OO\K01\OOK01.cs" />
+    <Compile Include="OO\K02\OOK02.cs" />
+    <Compile Include="OO\K03\OOK03.cs" />
+    <Compile Include="OO\K04\OOK04.cs" />
     <Compile Include="Operator\A01\OperatorA01.cs" />
     <Compile Include="Operator\A02\OperatorA02.cs" />
     <Compile Include="Operator\A03\OperatorA03.cs" />
@@ -77,6 +86,7 @@
     <Compile Include="Statement\A02\StatementA02.cs" />
     <Compile Include="Statement\A03\StatementA03.cs" />
     <Compile Include="Try\A01\TryA01.cs" />
+    <Compile Include="Try\A02\TryA02.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
