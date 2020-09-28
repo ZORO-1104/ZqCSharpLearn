@@ -16,7 +16,7 @@ using System.Threading;
 
 namespace ZqCSharpLearn.Async.A03
 {
-    class AsyncA03 : ICodeTest
+    internal class AsyncA03 : ICodeTest
     {
         public void Execute()
         {
@@ -25,7 +25,7 @@ namespace ZqCSharpLearn.Async.A03
         }
     }
 
-    class ClassA
+    internal class ClassA
     {
         public void CookDinner()
         {
@@ -41,14 +41,14 @@ namespace ZqCSharpLearn.Async.A03
             Console.WriteLine($"用了盐炒的菜就是好吃【{result}】，线程Id为：{ GetThreadId() }");
 
             Console.WriteLine($"老婆把饭做好了，线程Id为：{ GetThreadId() }");
-
         }
 
         private async Task<string> CommandBuySalt()
         {
             Console.WriteLine($"这时我准备去买盐了，线程Id为：{GetThreadId()}");
 
-            string result = await Task.Run(() => {
+            var t = await Task.Run(() =>
+            {
                 Console.WriteLine($"屁颠屁颠的去买盐，线程Id为：{GetThreadId()}");
                 for (int i = 0; i < 5; i++)
                 {
@@ -59,9 +59,9 @@ namespace ZqCSharpLearn.Async.A03
                 return "盐买回来了，顺便我还买了一包烟";
             });
 
-            Console.WriteLine($"买盐完成，【{result}】，线程Id为：{GetThreadId()}");
+            Console.WriteLine($"买盐完成，线程Id为：{GetThreadId()}");
 
-            return result;
+            return t;
         }
 
         private int GetThreadId()
