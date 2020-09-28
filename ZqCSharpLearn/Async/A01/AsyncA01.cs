@@ -6,6 +6,7 @@
 注意：当前线程遇到 await 时，则立刻跳回调用方法继续往下执行。
 而 Task 执行完成之后将执行 await 之后的代码，并且与 await 之前的线程不是同一个。
 */
+
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -15,17 +16,16 @@ using System.Threading;
 
 namespace ZqCSharpLearn.Async.A01
 {
-    class AsyncA01 : ICodeTest
+    internal class AsyncA01 : ICodeTest
     {
         public void Execute()
         {
             ClassA classA = new ClassA();
             classA.CleanRoom();
-
         }
     }
 
-    class ClassA
+    internal class ClassA
     {
         public void CleanRoom()
         {
@@ -40,12 +40,13 @@ namespace ZqCSharpLearn.Async.A01
         private async void CommandDropLitter()
         {
             Console.WriteLine($"这时我准备去扔垃圾，线程Id为：{GetThreadId()}");
-            await Task.Run(()=> { 
+            await Task.Run(() =>
+            {
                 Console.WriteLine($"屁颠屁颠的去扔垃圾，线程Id为：{GetThreadId()}");
                 for (int i = 0; i < 5; i++)
                 {
                     Thread.Sleep(1000);
-                    Console.WriteLine($"扔垃圾完成{1.0*(i+1)/5*100}%，线程Id为：{GetThreadId()}");
+                    Console.WriteLine($"扔垃圾完成{1.0 * (i + 1) / 5 * 100}%，线程Id为：{GetThreadId()}");
                 }
             });
             Console.WriteLine($"垃圾扔了还有啥吩咐，线程Id为：{GetThreadId()}");
