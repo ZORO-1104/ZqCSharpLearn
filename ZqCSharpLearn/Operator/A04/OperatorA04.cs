@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 /*
  * 自定义类型转换
  * 有显示转换和隐式转换
+ * 
  */
 namespace ZqCSharpLearn.Operator.A04
 {
