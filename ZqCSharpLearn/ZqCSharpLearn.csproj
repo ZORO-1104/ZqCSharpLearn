@@ -53,8 +53,11 @@
     <Compile Include="Class\A01\ClassA01.cs" />
     <Compile Include="Class\A02\ClassA02.cs" />
     <Compile Include="Class\A03\ClassA03.cs" />
+    <Compile Include="Collection\A01\CollectionA01.cs" />
     <Compile Include="Delegate\A01\DelegateA01.cs" />
     <Compile Include="ICodeTest.cs" />
+    <Compile Include="Linq\A01\LinqA01.cs" />
+    <Compile Include="Linq\H01\LinqH01.cs" />
     <Compile Include="MultiThread\A01\MultiThreadA01.cs" />
     <Compile Include="MultiThread\A02\MultiThreadA02.cs" />
     <Compile Include="MultiThread\A03\MultiThreadA03.cs" />
@@ -63,6 +66,7 @@
     <Compile Include="MultiThread\B03\MultiThreadB03.cs" />
     <Compile Include="MultiThread\B04\MultiThreadB04.cs" />
     <Compile Include="MultiThread\B05\MultiThreadB05.cs" />
+    <Compile Include="MultiThread\B06\MultiThreadB06.cs" />
     <Compile Include="OO\A01\OOA01.cs" />
     <Compile Include="OO\A02\OOA02.cs" />
     <Compile Include="OO\K01\OOK01.cs" />
@@ -80,8 +84,11 @@
     <Compile Include="Operator\A09\OperatorA09.cs" />
     <Compile Include="Operator\A10\OperatorA10.cs" />
     <Compile Include="Operator\A11\OperatorA11.cs" />
+    <Compile Include="Other\A01\OtherA01.cs" />
+    <Compile Include="Other\B01\OtherB01.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Reflection\A01\ReflectionA01.cs" />
     <Compile Include="Statement\A01\StatementA01.cs" />
     <Compile Include="Statement\A02\StatementA02.cs" />
     <Compile Include="Statement\A03\StatementA03.cs" />
