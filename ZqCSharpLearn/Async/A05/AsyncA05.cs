@@ -1,6 +1,6 @@
 ﻿/*
 功能：取消异步操作
-借助 System.Threading.CancellationTokenSource 
+借助 System.Threading.CancellationTokenSource
 和 System.Threading.Tasks.CancellationToken 对象来完成
 ----------------------
 1) 刚开始我以为调用 source.Cancel() 方法后会立即取消 Task 的执行，
@@ -30,7 +30,7 @@ using System.Threading;
 
 namespace ZqCSharpLearn.Async.A05
 {
-    class AsyncA05 : ICodeTest
+    internal class AsyncA05 : ICodeTest
     {
         public void Execute()
         {
@@ -39,7 +39,7 @@ namespace ZqCSharpLearn.Async.A05
         }
     }
 
-    class ClassA
+    internal class ClassA
     {
         public void CookDinner()
         {
@@ -50,7 +50,7 @@ namespace ZqCSharpLearn.Async.A05
             Task<string> task = CommandBuySalt_CancleBySalt(source.Token);
 
             Console.WriteLine($"不管他继续炒菜，线程Id为：{ GetThreadId() }");
-            Thread.Sleep(100);
+            Thread.Sleep(20);
 
             string result = "家里有盐";
             if (!string.IsNullOrEmpty(result))
@@ -71,8 +71,6 @@ namespace ZqCSharpLearn.Async.A05
 
             Console.WriteLine($"最终的任务：状态{task.Status}，是否完成{task.IsCompleted}" +
                 $"，是否取消{task.IsCanceled}，是否失败{task.IsFaulted}，当前线程Id为：{GetThreadId()}");
-
-
         }
 
         private async Task<string> CommandBuySalt_CancleBySalt(CancellationToken token)
@@ -80,10 +78,10 @@ namespace ZqCSharpLearn.Async.A05
             Console.WriteLine($"这时我准备去买盐了，线程Id为：{GetThreadId()}");
 
             //已开始执行的任务不能被取消
-            string result = await Task.Run(() => 
+            string result = await Task.Run(() =>
             {
                 Console.WriteLine("屁颠屁颠的去买盐，线程Id为：{0}", GetThreadId());
-                Thread.Sleep(10);//修改此处的延时时间，可以分情况执行取消异步task的方法
+                Thread.Sleep(2000);//修改此处的延时时间，可以分情况执行取消异步task的方法
             }, token).ContinueWith((t) => //若没有取消就继续执行
             {
                 Console.WriteLine("我买好盐了，线程Id为：{0}", GetThreadId());
