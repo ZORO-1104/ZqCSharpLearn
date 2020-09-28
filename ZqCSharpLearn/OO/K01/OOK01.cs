@@ -92,9 +92,9 @@ namespace ZqCSharpLearn.OO.K01
         //使用接口，实现松耦合
         private IPhone _phone;
 
-        public PhoneUser(IPhone nokiaPhone)
+        public PhoneUser(IPhone phone)
         {
-            _phone = nokiaPhone;
+            _phone = phone;
         }
 
         public void UsePhone()
