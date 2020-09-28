@@ -1,12 +1,30 @@
 ﻿
 
-
+【Async】
+A01：不关心结果，返回 void 类型
+A02：关心是否执行完成，返回 Task 类型
+A03：不止关心是否执行完成，还要获取执行结果。返回 Task<TResult> 类型
+A04：同时在异步方法中开启多个Task
+A05：取消异步操作
+A06：
 
 
 【Class】
 A01：类的索引器；is类型检查操作符；
 A02：重写override和隐藏new的区别；
 A03：子类调用父类的构造器；构造器和字段的实例化顺序；
+
+【Collection】
+A01：IEnumerable和Enumerator；foreach的内部原理
+
+
+【Delegate】
+
+
+【Linq】
+A01：延时处理测试；
+H01：集合处理测试；
+
 
 
 【MultiThread】
@@ -18,15 +36,28 @@ B02：长任务（还带阻塞的）；短小的计算密集任务
 B03：带返回值的任务；获取待返回值任务的Result属性，会阻塞当前方法；
 B04：线程延续，awaiter.OnCompleted和Task.ContinueWith
 B05：Task.Delay异步延时
+B06：异步函数Async和await
 
 
 【OO】
-【K01】：使用接口实现松耦合（类内的字段是接口，而不是具体的类）
-【K02】：使用接口和抽象类实现松耦合
-【K03】：胖接口需改为小接口（使用者/消费方 用不到）【】
-【K04】：胖接口需该为小接口（导致原本可正常使用的类，被挡在外面）【IEnumerable、ICollection】
+K01：使用接口实现松耦合（类内的字段是接口，而不是具体的类）
+K02：使用接口和抽象类实现松耦合
+K03：胖接口需改为小接口（使用者/消费方 用不到）【】
+K04：胖接口需该为小接口（导致原本可正常使用的类，被挡在外面）【IEnumerable、ICollection】
+
+【Operator】
 
 
+【Other】
+A01：特性[CallerMemberName]；INotifyPropertyChanged接口；
+B01：重载运算符；成对重载，不然编译报错；
+C01：协变与逆变
+
+
+【Reflection】
+A01：反射基本测试，调用无参构造器、有参构造器、实例方法、静态方法；
+
+【Statement】
 
 【Try】
 A01：try/catch的执行方法与调用方法的异常捕获；
