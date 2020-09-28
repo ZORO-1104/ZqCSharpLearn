@@ -7,7 +7,7 @@ using System.Threading;
 
 namespace ZqCSharpLearn.Async.A06
 {
-    class AsyncA06 : ICodeTest
+    internal class AsyncA06 : ICodeTest
     {
         public void Execute()
         {
@@ -16,7 +16,7 @@ namespace ZqCSharpLearn.Async.A06
         }
     }
 
-    class ClassA
+    internal class ClassA
     {
         public void CookDinner()
         {
@@ -60,16 +60,19 @@ namespace ZqCSharpLearn.Async.A06
                     //source1.CancelAfter(3000);//3秒后才调用取消的回调方法
                     Console.WriteLine($"既然有盐，我就继续炒菜【{results[0]}】，线程Id为：{GetThreadId()}");
                     break;
+
                 case 2:
                     source2.Cancel();//传达取消请求（不做了出去吃）
                     //source2.CancelAfter(3000);//3秒后才调用取消的回调方法
                     Console.WriteLine($"我们出去吃不用买啦【{results[1]}】，线程Id为：{GetThreadId()}");
                     break;
+
                 case 3:
                     source.Cancel();//传达取消请求（没理由）
                     //source1.CancelAfter(3000);//3秒后才调用取消的回调方法
                     Console.WriteLine($"没理由就是不用买啦【{results[2]}】，线程Id为：{GetThreadId()}");
                     break;
+
                 default:
                     break;
             }
