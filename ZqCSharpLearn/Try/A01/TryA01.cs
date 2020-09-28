@@ -11,6 +11,14 @@ namespace ZqCSharpLearn.Try.A01
         public void Execute()
         {
             Test01();
+            //try
+            //{
+            //    Test01();
+            //}
+            //catch (Exception)
+            //{
+            //    throw;
+            //}
         }
 
         /// <summary>
@@ -19,14 +27,16 @@ namespace ZqCSharpLearn.Try.A01
         /// </summary>
         private void Test01()
         {
-            try
-            {
-                Fun01();
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine($"{ex.StackTrace}>>{ex.Message}");
-            }
+            Fun01();
+
+            //try
+            //{
+            //    Fun01();
+            //}
+            //catch (Exception ex)
+            //{
+            //    Console.WriteLine($"{ex.StackTrace}>>{ex.Message}");
+            //}
         }
 
         private void Fun01()
