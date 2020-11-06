@@ -25,6 +25,9 @@ A01：IEnumerable和Enumerator；foreach的内部原理
 A01：延时处理测试；
 H01：集合处理测试；
 
+【MultiThread】-【Basic】
+（线程的几个状态：开始，就绪，运行，阻塞，结束）
+A01：线程的基本示例；
 
 
 【MultiThread】
@@ -40,6 +43,8 @@ B06：异步函数Async和await
 
 
 【OO】
+A03：类成员的重写与隐藏
+A10：接口基本测试；接口的显示实现与调用；
 K01：使用接口实现松耦合（类内的字段是接口，而不是具体的类）
 K02：使用接口和抽象类实现松耦合
 K03：胖接口需改为小接口（使用者/消费方 用不到）【】
@@ -53,6 +58,8 @@ A04：自定义类型转换
 A01：特性[CallerMemberName]；INotifyPropertyChanged接口；
 B01：重载运算符；成对重载，不然编译报错；
 C01：协变与逆变
+D01：特性类Attribute的使用
+E01：Object和装箱与拆箱
 
 
 【Reflection】
